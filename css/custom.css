@@ -1,0 +1,451 @@
+/*-- scss:defaults --*/
+
+/* Urdu Learning Platform - Custom Styles */
+
+/*-- scss:rules --*/
+
+/* Main body background gradient */
+body {
+    background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* Urdu font for RTL text */
+.urdu-text {
+    font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+    direction: rtl;
+    text-align: right;
+}
+
+/* Content wrapper */
+#quarto-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    max-width: 1200px;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #00b09b;
+}
+
+h1.title {
+    font-size: 3em;
+    text-align: center;
+    color: #00b09b;
+    margin-bottom: 20px;
+}
+
+/* Lesson cards */
+.lesson-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border-left: 6px solid #00b09b;
+}
+
+/* Vocabulary cards */
+.vocab-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border-left: 4px solid #96c93d;
+    margin-bottom: 15px;
+}
+
+.vocab-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.vocab-urdu {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+    direction: rtl;
+    text-align: right;
+}
+
+.vocab-roman {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.vocab-english {
+    color: #34495e;
+    font-weight: 600;
+}
+
+/* Audio button */
+.audio-btn {
+    background: #00b09b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s;
+    margin-left: 10px;
+}
+
+.audio-btn:hover {
+    background: #008c7a;
+    transform: scale(1.05);
+}
+
+/* Quiz styles */
+.quiz-question {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid #96c93d;
+}
+
+.quiz-option {
+    padding: 15px 20px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 10px 0;
+}
+
+.quiz-option:hover {
+    background: #f0f0f0;
+    border-color: #00b09b;
+}
+
+.quiz-option.selected {
+    background: #00b09b;
+    color: white;
+    border-color: #00b09b;
+}
+
+.quiz-option.correct {
+    background: #27ae60;
+    color: white;
+    border-color: #27ae60;
+}
+
+.quiz-option.incorrect {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.quiz-option.disabled {
+    pointer-events: none;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Progress bars */
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00b09b 0%, #96c93d 100%);
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Difficulty badges */
+.difficulty-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.difficulty-beginner {
+    background: #27ae60;
+    color: white;
+}
+
+.difficulty-intermediate {
+    background: #f39c12;
+    color: white;
+}
+
+.difficulty-advanced {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Tips and info boxes */
+.tip-box {
+    background: #e7f3ff;
+    border-left: 5px solid #2196F3;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.grammar-box {
+    background: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.example-box {
+    background: #d1ecf1;
+    border-left: 5px solid #17a2b8;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Writing practice area */
+.writing-area {
+    min-height: 200px;
+    padding: 20px;
+    border: 2px solid #00b09b;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    text-align: right;
+    background: #fafafa;
+}
+
+/* Daily challenge card */
+.challenge-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Score card */
+.score-card {
+    background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.score-number {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Tables */
+.dataTable {
+    font-size: 1.1em;
+}
+
+.dataTable td {
+    padding: 12px !important;
+}
+
+/* Navbar customization */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    background: #f8f9fa;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #quarto-content {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1.title {
+        font-size: 2em;
+    }
+    
+    .vocab-urdu {
+        font-size: 1.5em;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Interactive elements */
+.clickable {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.clickable:hover {
+    transform: scale(1.02);
+}
+
+/* Streak counter */
+.streak-badge {
+    background: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+/* Category pills */
+.category-pill {
+    display: inline-block;
+    background: #00b09b;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 0.9em;
+}
+
+/* Alphabet grid */
+.alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.alphabet-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.alphabet-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.alphabet-char {
+    font-size: 3em;
+    color: #00b09b;
+    font-weight: bold;
+}
+
+/* Urdu medium text */
+.urdu-medium {
+    font-size: 2em;
+    direction: rtl;
+    text-align: right;
+    color: #34495e;
+    margin: 10px 0;
+}
+
+/* Roman transliteration */
+.roman {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 1.1em;
+    margin: 8px 0;
+    direction: ltr;
+    text-align: left;
+}
+
+/* English translation */
+.english {
+    color: #34495e;
+    font-weight: 600;
+    font-size: 1em;
+    direction: ltr;
+    text-align: left;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #00b09b;
+}
